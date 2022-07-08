@@ -11,8 +11,45 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+// route Basic
+Route::get('/about', function () {
+    return view('tentang');
+});
+
+Route::get('profile', function () {
+    $nama = "Dinar AS";
+    return view('pages.profile', compact('nama'));
+});
+
+/*Route::get('biodata', function () {
+$nama ="Dinar AS";
+$kelas ="XII";
+$jurusan ="RPL";
+$umur ="17 Thn";
+$jenis ="Laki-Laki";
+return view('pages.biodata', compact(
+'nama',
+'kelas',
+'jurusan',
+'umur',
+'jenis',));
+}); */
+
+//route parameter
+Route::get('biodata/{nama}', function ($a) {
+    return view('pages.biodata', compact('a'));
+});
+
+Route::get('parameter/{makanan}/{minuman}/{harga}', function ($makanan, $minuman, $harga) {
+    return view('pages.parameter', compact('makanan', 'minuman', 'harga'));
+});
+
+Route::get('pesan/{menu?}', function ($pesan = "-") {
+    return view('pages.pesan', compact('pesan'));
 });
