@@ -10,6 +10,7 @@
 
 <body>
     Saya Pesan : {{ $pesan }}
+
 </body>
 
 </html>

@@ -53,3 +53,7 @@ Route::get('parameter/{makanan}/{minuman}/{harga}', function ($makanan, $minuman
 Route::get('pesan/{menu?}', function ($pesan = "-") {
     return view('pages.pesan', compact('pesan'));
 });
+
+Route::get('pemesanan/{makanan?}/{minuman?}/{cemilan?}', function ($a = "silahkan pesan", $b = "silahkan pesan", $c = "silahkan pesan") {
+    return view('pages.pemesanan', compact('a', 'b', 'c'));
+});
