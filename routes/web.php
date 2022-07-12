@@ -1,5 +1,7 @@
 <?php
 
+//menggunkan/ mengimport LatihanController
+use App\Http\Controllers\LatihanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -57,3 +59,5 @@ Route::get('pesan/{menu?}', function ($pesan = "-") {
 Route::get('pemesanan/{makanan?}/{minuman?}/{cemilan?}', function ($a = "silahkan pesan", $b = "silahkan pesan", $c = "silahkan pesan") {
     return view('pages.pemesanan', compact('a', 'b', 'c'));
 });
+
+Route::get('latihan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perkenalan']);
