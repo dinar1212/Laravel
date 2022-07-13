@@ -61,3 +61,7 @@ Route::get('pemesanan/{makanan?}/{minuman?}/{cemilan?}', function ($a = "silahka
 });
 
 Route::get('latihan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perkenalan']);
+
+Route::get('siswa/{name?}/{aget?}/{mapel?}', [LatihanController::class, 'siswa']);
+
+Route::get('mahasiswa/', [LatihanController::class, 'mahasiswa']);
