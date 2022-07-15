@@ -65,3 +65,7 @@ Route::get('latihan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perk
 Route::get('siswa/{name?}/{aget?}/{mapel?}', [LatihanController::class, 'siswa']);
 
 Route::get('mahasiswa/', [LatihanController::class, 'mahasiswa']);
+
+Route::get('tv/', [LatihanController::class, 'tv']);
+Route::get('belanja/', [LatihanController::class, 'belanja']);
+Route::get('raport/', [LatihanController::class, 'raport']);

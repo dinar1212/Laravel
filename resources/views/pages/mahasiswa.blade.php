@@ -29,8 +29,8 @@
             @endforeach
             @php $rata = $total / count($kuliah['maha']) @endphp
             Total Nilai : {{ $total }} <br>
-            {{-- Rata Rata <b>{{ $kuliah['nama'] }} </b> :
-            {{ $rata }} --}}
+            Rata Rata : {{ $rata }} <br>
+            <hr>
         @endforeach
 
     </fieldset>
